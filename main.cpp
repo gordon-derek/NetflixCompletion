@@ -104,6 +104,8 @@ int main(){
 
 		bestRMSE[n] = RandomGuess(p, q, RT);
 	}
+
+
 	for(int n = 0; n < NUM_ITERATIONS; n++)
 		cout << bestRMSE[n] << endl;
 
@@ -201,6 +203,12 @@ float RandomGuess(/* in */ const MatrixXf & p, //the user matrix
 	}
 
 	return RMSECalc(rTest, R);
+}
+
+float RandomInitLearning(/* in */ const MatrixXf & p, //the user matrix
+				 		 /* out*/ const MatrixXf & q, //the movie matrix
+				 		 /* in */ const MatrixXf & R){
+	
 }
 
 void RemoveRow(/* in */ MatrixXf & orig,
